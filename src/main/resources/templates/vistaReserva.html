@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width = device - width , initial-scale=1">
+<meta http-equiv="x-ua-compatible">
+<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+	crossorigin="anonymous">
+</head>
+
+<body>
+
+
+	<div>
+
+		<form action='#' th:action="@{/vuelos/reservar}" th:object="${vuelo}"
+			method="post">
+			<table class="table table-dark table-striped">
+				<tr>
+					<td><label>Numero Vuelo: </label></td>
+					<td><input type="text" id="numeroVuelo"
+						th:field="*{numeroVuelo}"  required></td>
+				</tr>
+
+				<tr>
+					<td><label>Cantidad asientos a comprar: </label></td>
+					<td><input type="number" id="cantidadAsiento"
+						th:field="*{cantidadAsiento}"  required></td>
+				</tr>
+
+				<tr>
+					<td><label>Cedula: </label></td>
+					<td><input type="text" id="cedula"
+						th:field="*{cedula}" required></td>
+				</tr>
+
+
+
+			</table>
+
+			<input type="submit" value="Reservar">
+
+
+
+		</form>
+	</div>
+
+
+
+</body>
+
+</html>
