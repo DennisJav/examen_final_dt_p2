@@ -98,6 +98,8 @@ public class GestorAirlines implements IGestorAirlines{
 			vueloTO.setOrigen(v.getOrigen());
 			vueloTO.setValorAsiento(v.getValorAsiento());
 			vueloTO.setEstado(v.getEstado());
+			vueloTO.setNombreAvion(v.getAvion().getNombre());
+			
 			
 			return vueloTO;
 			
